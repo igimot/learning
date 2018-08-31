@@ -1,0 +1,10 @@
+inpTimeInSec = int(input())
+mm = inpTimeInSec / 60
+hhTime = int((mm / 60) % 24)
+mmTime = ((int(mm % 60)) + 100)
+mmFirstTime = (mmTime // 10) % 10
+mmSecTime = mmTime % 10
+ssTime = inpTimeInSec - (int(mm) * 60) + 100
+ssFirstTime = (ssTime // 10) % 10
+ssSecTime = ssTime % 10
+print(hhTime, ':', mmFirstTime, mmSecTime, ':', ssFirstTime, ssSecTime, sep='')
